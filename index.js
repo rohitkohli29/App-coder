@@ -61,6 +61,9 @@ app.get("/profile", indexRouter.isLoggedIn, async (req, res) => {
 });
 
  
-app.listen(process.env.PORT,()=>{
+app.listen(process.env.PORT || 4000,()=>{
   console.log('Server started !')
 })
+
+
+module.exports = app;
